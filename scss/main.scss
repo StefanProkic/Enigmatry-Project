@@ -3,6 +3,7 @@
     margin: 0;
     padding: 0;
 }
+
 @import 'colors';
 @import 'header';
 @import 'mixins';
@@ -12,8 +13,16 @@
 
 body {
     background: $bgColor;
-    
+    font-family: 'Inter';
 }
+
+h1, h2, h3, h4 {
+    font-family: 'Poppins';
+}
+button {
+    font-family: 'Poppins';
+}
+
 .container {
     width: 1440px;
     padding: 0 112px;

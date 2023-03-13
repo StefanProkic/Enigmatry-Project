@@ -17,20 +17,21 @@
 
 @mixin horizontal-list {
     @include reset-list;
-    font-family: 'Inter';
+    /*font-family: 'Inter';*/
     font-size: 18px;
     line-height: 24px;
     font-weight: 600;
     color: $white;
-    
+
 
 }
 
 @mixin breadcrumbs {
-    font-family: 'Inter';
+    /*font-family: 'Inter';*/
     font-weight: 400;
     font-size: 13px;
     line-height: 18px;
+
 }
 
 @mixin breadcrumbs-arrows {
@@ -41,9 +42,57 @@
 }
 
 @mixin product-headline {
-    font-family: 'Poppins';
+    /*font-family: 'Poppins';*/
     font-weight: 600;
     font-size: 40px;
     line-height: 48px;
     color: $semiBlack;
+}
+
+@mixin stock-info-span {
+    color: $orange;
+
+}
+
+@mixin stock-info {
+    /*font-family: 'Inter';*/
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 24px;
+    color: $semiBlack;
+}
+
+@mixin p-info {
+    /*font-family: 'Inter';*/
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    color: $semiBlack;
+}
+
+@mixin select-label {
+    font-size: 11px;
+    font-weight: 400;
+    line-height: 18px;
+    color: $darkGrey;
+}
+
+@mixin select-box {
+    background-color: $white;
+    padding: 4px 12px 12px 16px;
+    width: 200px;
+    border-bottom: 1px solid $mediumGrey;
+    border-radius: 4px 4px 0 0;
+}
+
+@mixin btn {
+    background-color: $green;
+    padding: 11px 24px 13px 25px;
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 24px;
+    color: $white;
+    border: 1px solid;
+    border-radius: 4px;
+    cursor: pointer;
 }

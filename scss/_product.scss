@@ -8,6 +8,12 @@
         li {
             @include reset-list;
             @include breadcrumbs;
+
+            a {
+                text-decoration: none;
+                color: $semiBlack;
+            }
+
         }
 
         li+li:before {
@@ -33,6 +39,10 @@
         :nth-child(5) {
             margin-left: 18px;
         }
+
+        :nth-child(n+2) {
+            cursor: pointer;
+        }
     }
 
     &__info {
@@ -41,12 +51,14 @@
 
         &__image {
             margin-right: 32px;
+
             :nth-child(2) {
                 position: relative;
                 right: 0;
                 bottom: 224px;
                 cursor: pointer;
             }
+
             :nth-child(3) {
                 position: relative;
                 left: 584px;
@@ -54,9 +66,78 @@
                 cursor: pointer;
             }
         }
+
         &__stock {
-            background-color: $lightGray;
+            background-color: $lightGrey;
+            padding: 24px 32px 66px 32px;
+
+            .stockInfo {
+                @include stock-info;
+                margin-bottom: 13.19px;
+            }
+
+            span {
+                @include stock-info-span;
+            }
+
+            p {
+                @include p-info;
+
+            }
+
+            &__inputWrapper {
+                margin-top: 23.76px;
+                display: flex;
+                :nth-child(1) {
+                    margin-right: 22px
+                }
+
+                .selectType {
+                    @include inputs;
+                    border: none;
+                    width: 173px;
+                    margin-left: -4px;
+                }
+               
+                &__model, &__color {
+                    @include select-box;
+                    
+                    
+                    label {
+                        @include select-label;
+                    }
+                }
+            }
+            #checkboxActive {
+                margin-top: 21.31px;
+                
+            }
+            
+            #checkbox {
+                margin-top: 12.01px
+            }
+            .checkboxLabel {
+                @include inputs;
+                line-height: 24px;
+                color: $semiBlack;
+            } 
+            &__btnWrapper {
+                margin-top: 25.66px;
+                display: flex;
+
+                button {
+                    @include btn;
+                }
+                .btnContac {
+                    background-color: $white;
+                    padding-right: 25px;
+                    color: $green;
+                    border-color: $mediumGrey;
+                    margin-left: 8px;
+                    
+                }
+            }
         }
     }
-    
+
 }

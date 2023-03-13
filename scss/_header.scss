@@ -19,23 +19,30 @@ header {
 
     }
 
-    nav ul :nth-child(1) {
+    /* nav ul li :nth-child(n+2) {
         color: $semiBlack;
-    }
+    } */
 
     &__nav {
         margin: 49px 0 47px 18px;
 
-        li {
+        li  {
             @include horizontal-list;
             margin-left: 40px;
-            cursor: pointer;
+            
+            
+            a {
+                text-decoration: none;
+                color: $white;
+                
+            }
         }
     }
 
+    
     &__searchContainer {
         display: flex;
-        background: $lightGray;
+        background: $lightGrey;
         margin: 32px 178px 32px 40px;
         border-radius: 4px 4px 0 0;
         padding: 19px 14px 19px 16px;

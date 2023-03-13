@@ -12,26 +12,26 @@
 <body>
     <header>
         <div class="header container">
-            <div class="header__logo"><a href="#"><img src="assets/img/LOGO.png" title="Home" alt="logo" width="150px"
-                        height="40px"></a></div>
+            <div class="header__logo"><a href="#"><img src="assets/img/LOGO.png" title="Home" alt="logo" width="150"
+                        height="40"></a></div>
             <div class="header__nav">
                 <nav>
                     <ul>
-                        <li>Products</li>
-                        <li>Services</li>
-                        <li>About us</li>
-                        <li>Contact</li>
+                        <li><a href="#">Products</a></li>
+                        <li><a href="#">Services</a></li>
+                        <li><a href="#">About us</a></li>
+                        <li><a href="#">Contact</a></li>
                     </ul>
                 </nav>
             </div>
             <div class="header__searchContainer">
                 <input type="text" placeholder="Search">
-                <img src="assets/ico/search.svg" alt="search icon" width="20px" height="20px">
+                <img src="assets/ico/search.svg" alt="search icon" width="20" height="20">
             </div>
             <div class="header__icons">
-                <img src="assets/ico/user.svg" alt="user icon" width="18px" height="20px">
-                <img src="assets/ico/heart.svg" alt="heart icon" width="20px" height="20px">
-                <img src="assets/ico/Group 91.svg" alt="cart icon" width="33px" height="29px">
+                <img src="assets/ico/user.svg" alt="user icon" width="18" height="20">
+                <img src="assets/ico/heart.svg" alt="heart icon" width="20" height="20">
+                <img src="assets/ico/Group 91.svg" alt="cart icon" width="33" height="29">
             </div>
         </div>
     </header>
@@ -39,51 +39,51 @@
         <div class="product container">
             <div class="product__breadcrumbs">
                 <ul>
-                    <li>Home</li>
-                    <li>Products</li>
-                    <li>Bikes</li>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">Products</a></li>
+                    <li><a href="#">Bikes</a></li>
                 </ul>
             </div>
             <div class="product__headlineAndIcons">
                 <h1>Product name lorem ipsum</h1>
-                <img src="assets/ico/arrow-left.svg" alt="arrow left icon" width="18px" height="20px">
-                <img src="assets/ico/arrow-right.svg" alt="arrow right icon" width="18px" height="20px">
-                <img src="assets/ico/heart-black.svg" alt="heart icon" width="20px" height="20px">
-                <img src="assets/ico/share-nodes.svg" alt="share icon" width="18px" height="20px">
+                <img src="assets/ico/arrow-left.svg" alt="arrow left icon" width="18" height="20">
+                <img src="assets/ico/arrow-right.svg" alt="arrow right icon" width="18" height="20">
+                <img src="assets/ico/heart-black.svg" alt="heart icon" width="20" height="20">
+                <img src="assets/ico/share-nodes.svg" alt="share icon" width="18" height="20">
             </div>
             <div class="product__info">
                 <div class="product__info__image">
                     <img src="assets/img/bicycle-product.png" alt="bicycle product image"
-                        width="696px" height="392px">
-                        <img src="assets/ico/arrow-left.svg" alt="left arrow icon" width="56px" height="56px">
-                        <img src="assets/ico/arrow-right.svg" alt="right arrow icon" width="56px" height="56px">
+                        width="696" height="392">
+                        <img src="assets/ico/arrow-left.svg" alt="left arrow icon" width="56" height="56">
+                        <img src="assets/ico/arrow-right.svg" alt="right arrow icon" width="56" height="56">
                     </div>
                 <div class="product__info__stock">
-                    <p>In stock <span>- only 2 left</span></p>
+                    <p class="stockInfo">In stock <span>- only 2 left</span></p>
                     <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
                         pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt
                         mollit anim id est laborum.</p>
-                    <div class="product__info__inputWrapper">
-                        <div class="productt__info__inputWrapper__inputModel">
-                            <label for="bicycle">Model</label>
-                            <select name="bicycle" id="bicycle">
+                    <div class="product__info__stock__inputWrapper">
+                        <div class="product__info__stock__inputWrapper__model">
+                            <label for="bicycle">Model</label><br>
+                            <select name="bicycle" class="selectType">
                                 <option value="Gents - Medium">Gents - Medium</option>
                             </select>
                         </div>
-                        <div class="product__info__inputWrapper__inputColor">
-                            <label for="bicycleColor">Color</label>
-                            <select name="bicycleColor" id="bicycleColor">
+                        <div class="product__info__stock__inputWrapper__color">
+                            <label for="bicycleColor">Color</label><br>
+                            <select name="bicycleColor" class="selectType">
                                 <option value="black">Black</option>
                             </select>
                         </div>
                     </div>
-                    <input type="checkbox" id="bicycle" name="bicycle" value="bicycle">
-                    <label for="bicycle">Add option lorem ipsum</label><br>
-                    <input type="checkbox" id="bicycle" name="bicycle" value="bicycle">
-                    <label for="bicycle">Add option autpat velit cano totam rem aperiam</label>
-                    <div class="product__info__btnWrapper">
-                        <button class="btnCart">Add to cart</button>
-                        <button class="btnContact">Contact us</button>
+                    <input type="checkbox" id="checkboxActive" name="bicycle" value="bicycle">
+                    <label class="checkboxLabel" for="bicycle">Add option lorem ipsum</label><br>
+                    <input type="checkbox" id="checkbox" name="bicycle" value="bicycle">
+                    <label class="checkboxLabel" for="bicycle">Add option autpat velit cano totam rem aperiam</label>
+                    <div class="product__info__stock__btnWrapper">
+                        <form><button type="submit" class="btnCart">Add to cart</button></form>
+                        <form><button type="button" class="btnContac">Contact us</button></form>
                     </div>
                 </div>
             </div>
