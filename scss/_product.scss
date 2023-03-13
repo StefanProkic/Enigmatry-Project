@@ -1,0 +1,62 @@
+@import 'mixins';
+@import 'fonts';
+
+.product {
+    margin: 0 auto;
+
+    &__breadcrumbs {
+        li {
+            @include reset-list;
+            @include breadcrumbs;
+        }
+
+        li+li:before {
+            @include breadcrumbs-arrows;
+        }
+    }
+
+    &__headlineAndIcons {
+        display: flex;
+        align-items: baseline;
+
+        h1 {
+            @include product-headline;
+            margin-top: 26px;
+            margin-right: 527px;
+        }
+
+        :nth-child(3),
+        :nth-child(4) {
+            margin-left: 20px;
+        }
+
+        :nth-child(5) {
+            margin-left: 18px;
+        }
+    }
+
+    &__info {
+        margin-top: 36px;
+        display: flex;
+
+        &__image {
+            margin-right: 32px;
+            :nth-child(2) {
+                position: relative;
+                right: 0;
+                bottom: 224px;
+                cursor: pointer;
+            }
+            :nth-child(3) {
+                position: relative;
+                left: 584px;
+                bottom: 224px;
+                cursor: pointer;
+            }
+        }
+        &__stock {
+            background-color: $lightGray;
+        }
+    }
+    
+}

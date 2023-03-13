@@ -1,0 +1,49 @@
+@mixin inputs {
+    font-size: 14px;
+    line-height: 18px;
+    font-weight: 400;
+    font-family: 'Inter';
+    background: none;
+
+}
+
+@mixin reset-list {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: inline-block;
+
+}
+
+@mixin horizontal-list {
+    @include reset-list;
+    font-family: 'Inter';
+    font-size: 18px;
+    line-height: 24px;
+    font-weight: 600;
+    color: $white;
+    
+
+}
+
+@mixin breadcrumbs {
+    font-family: 'Inter';
+    font-weight: 400;
+    font-size: 13px;
+    line-height: 18px;
+}
+
+@mixin breadcrumbs-arrows {
+    margin-left: 10px;
+    margin-right: 12px;
+    color: $semiBlack;
+    content: ">\00a0";
+}
+
+@mixin product-headline {
+    font-family: 'Poppins';
+    font-weight: 600;
+    font-size: 40px;
+    line-height: 48px;
+    color: $semiBlack;
+}

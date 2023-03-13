@@ -1,0 +1,28 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+@import 'colors';
+@import 'header';
+@import 'mixins';
+@import 'fonts';
+@import 'product';
+
+
+body {
+    background: $bgColor;
+    
+}
+.container {
+    width: 1440px;
+    padding: 0 112px;
+    
+}
+
+main {
+    background-color: $white;
+    padding-top: 40px;
+    
+
+}
