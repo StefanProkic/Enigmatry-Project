@@ -125,5 +125,22 @@
     border: 1px solid $mediumGrey;
     border-radius: 4px;
     cursor: pointer;
-    
+    }
+
+@mixin table-th {
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 24px;
+    color: $orange;
+}
+
+@mixin table-td {
+    font-weight: 400;
+    color: $semiBlack;
+}
+
+@mixin table-borders {
+    border: none;
+    text-align: left;
+    padding: 8.87px 0 7.11px 20px;
 }

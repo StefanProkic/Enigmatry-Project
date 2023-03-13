@@ -16,11 +16,10 @@ header {
     
 
 
-    /* &__logo {
-        margin-top: 40px;
-        margin-bottom: 40px;
+    &__logo {
+        margin-right: 18px;
 
-    } */
+    }
 
     /* nav ul li :nth-child(n+2) {
         color: $semiBlack;
@@ -61,6 +60,7 @@ header {
     &__searchContainer {
         display: flex;
         background: $lightGrey;
+        margin-left: 40px;
         /* margin: 32px 178px 32px 40px;*/
         border-radius: 4px 4px 0 0;
         padding: 19px 14px 19px 16px; 
@@ -80,6 +80,12 @@ header {
     &__icons {
        /*  margin-top: 49px; */
         display: flex;
+        :not(:first-child) {
+            margin-left: 24px;
+        }
+        :first-child {
+            margin-left: 178px;
+        }
     }
 
 }

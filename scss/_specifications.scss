@@ -1,0 +1,38 @@
+@import 'mixins';
+@import 'fonts';
+
+.specifications {
+    padding-top: 39px;
+    padding-bottom: 88.05px;
+    background-color: $lightGrey;
+    
+    &__headlines {
+        padding-bottom: 32.81px;
+    }
+    &__table {
+        /* padding-left: 8%;
+        padding-right: 8%; */
+
+        table {
+            border-collapse: collapse;
+            width: 100%;
+          }
+
+        th {
+            @include table-th;
+        }
+
+        td {
+            @include table-td;
+            @include table-td;
+        }
+    }
+}
+
+  td, th {
+    @include table-borders;
+  }
+  
+  tr:nth-child(even) {
+    background-color: $white;
+  }

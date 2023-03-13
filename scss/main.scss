@@ -10,6 +10,7 @@
 @import 'fonts';
 @import 'product';
 @import 'description';
+@import 'specifications';
 
 
 body {
@@ -23,6 +24,10 @@ h1, h2, h3, h4 {
 button {
     font-family: 'Poppins';
 }
+
+th, td {
+    font-family: 'Inter';
+}
 a {
     text-decoration: none;
 }
@@ -34,6 +39,9 @@ a {
 section {
     min-width: 100%;
     margin: 0 auto;
+}
+section:last-child {
+    background-color: $lightGrey;
 }
 
 main {
