@@ -8,6 +8,7 @@
         li {
             @include reset-list;
             @include breadcrumbs;
+            padding-bottom: 26px;
 
             a {
                 text-decoration: none;
@@ -24,25 +25,33 @@
     &__headlineAndIcons {
         display: flex;
         align-items: baseline;
+        justify-content: space-between;
 
         h1 {
             @include product-headline;
-            margin-top: 26px;
-            margin-right: 527px;
+            /* margin-top: 26px; */
+            
         }
+        &__icons {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
 
-        :nth-child(3),
-        :nth-child(4) {
+            :nth-child(1),
+        :nth-child(2), :nth-child(3) {
             margin-left: 20px;
         }
 
-        :nth-child(5) {
+        :nth-child(4) {
             margin-left: 18px;
         }
 
-        :nth-child(n+2) {
+        img {
             cursor: pointer;
         }
+        }
+
+        
     }
 
     &__info {
@@ -129,11 +138,7 @@
                     @include btn;
                 }
                 .btnContac {
-                    background-color: $white;
-                    padding-right: 25px;
-                    color: $green;
-                    border-color: $mediumGrey;
-                    margin-left: 8px;
+                    @include btn-contact;
                     
                 }
             }

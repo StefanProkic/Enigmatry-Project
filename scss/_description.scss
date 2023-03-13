@@ -1,0 +1,43 @@
+@import 'mixins';
+@import 'fonts';
+
+.description__detail {
+    margin: 0 auto;
+    display: flex;
+    padding: 18px 0 20px;
+    border-bottom: 1px solid $mediumGrey;
+    margin-bottom: 60px;
+    
+    :not(:last-child) {
+        margin-right: 32px
+    }
+
+    p a {
+        @include stock-info;
+
+    }
+}
+
+.description {
+    margin: 0 auto;
+    display: flex;
+    gap: 136px;
+    padding-top: 60px;
+    align-items: flex-start;
+    
+    &__info {
+
+        h2 {
+            margin-bottom: 32.51px;
+        }
+        p {
+            margin-bottom: 24.49px;
+        }
+        .btnMore {
+            @include btn-more;
+        }
+    }
+    &__image {
+        margin-bottom: 65px;
+    }
+}

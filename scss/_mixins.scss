@@ -85,14 +85,45 @@
     border-radius: 4px 4px 0 0;
 }
 
-@mixin btn {
-    background-color: $green;
-    padding: 11px 24px 13px 25px;
+@mixin btn-fonts {
     font-size: 16px;
     font-weight: 600;
     line-height: 24px;
+}
+
+@mixin btn {
+    @include btn-fonts;
+    background-color: $green;
+    padding: 11px 24px 13px 25px;
     color: $white;
     border: 1px solid;
     border-radius: 4px;
     cursor: pointer;
+}
+
+@mixin btn-contact {
+    @include btn-fonts;
+    background-color: $white;
+    padding-right: 25px;
+    color: $green;
+    border-color: $mediumGrey;
+    margin-left: 8px;
+}
+
+@mixin description-headline {
+    font-size: 28px;
+    font-weight: 600;
+    line-height: 36px;
+    color: $semiBlack;
+}
+
+@mixin btn-more {
+    @include btn-fonts;
+    background-color: $white;
+    padding: 11px 32px 13px 32px;
+    color: $orange;
+    border: 1px solid $mediumGrey;
+    border-radius: 4px;
+    cursor: pointer;
+    
 }
