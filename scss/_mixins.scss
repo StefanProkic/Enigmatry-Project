@@ -80,7 +80,7 @@
 @mixin select-box {
     background-color: $white;
     padding: 4px 12px 12px 16px;
-    width: 200px;
+    /* width: 200px; */
     border-bottom: 1px solid $mediumGrey;
     border-radius: 4px 4px 0 0;
 }

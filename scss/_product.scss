@@ -57,6 +57,7 @@
     &__info {
         margin-top: 36px;
         display: flex;
+        justify-content: space-around;
 
         &__image {
             margin-right: 32px;
@@ -70,7 +71,7 @@
 
             :nth-child(3) {
                 position: relative;
-                left: 584px;
+                left: 581px;
                 bottom: 224px;
                 cursor: pointer;
             }
@@ -111,18 +112,19 @@
                 &__model, &__color {
                     @include select-box;
                     
-                    
                     label {
                         @include select-label;
                     }
                 }
             }
-            #checkboxActive {
+            
+
+            #checkboxShort {
                 margin-top: 21.31px;
                 
             }
             
-            #checkbox {
+            #checkboxLong {
                 margin-top: 12.01px
             }
             .checkboxLabel {

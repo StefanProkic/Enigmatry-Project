@@ -78,13 +78,14 @@ header {
     }
 
     &__icons {
+        cursor: pointer;
        /*  margin-top: 49px; */
         display: flex;
         :not(:first-child) {
             margin-left: 24px;
         }
         :first-child {
-            margin-left: 178px;
+            margin-left: 143px;
         }
     }
 
