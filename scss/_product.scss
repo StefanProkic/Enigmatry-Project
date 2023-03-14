@@ -14,7 +14,7 @@
                 text-decoration: none;
                 color: $semiBlack;
             }
-
+            
         }
 
         li+li:before {
@@ -127,11 +127,78 @@
             #checkboxLong {
                 margin-top: 12.01px
             }
-            .checkboxLabel {
+           
+            /* checkbox */
+            &__chechboxContainer {
                 @include inputs;
+                display: block;
+                position: relative;
+                padding-left: 35px;
+                margin-left: 0;
+                cursor: pointer;
                 line-height: 24px;
                 color: $semiBlack;
-            } 
+                
+                -webkit-user-select: none;
+                -moz-user-select: none;
+                -ms-user-select: none;
+                user-select: none;
+              }
+              
+              /* default checkbox hide */
+              &__chechboxContainer input {
+                position: absolute;
+                opacity: 0;
+                cursor: pointer;
+                height: 0;
+                width: 0;
+              }
+              
+              /* new checkbox */
+              .checkmark {
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 18px;
+                height: 20px;
+                background-color: $lightGrey;
+                border: 2px solid $checkboxGrey;
+                border-radius: 4px;
+              }
+              
+              
+              
+              &__chechboxContainer input:checked ~ .checkmark {
+                background-color: $green;
+                border: 2px solid $green;
+              }
+              
+              /* chechmark */
+              .checkmark:after {
+                content: "";
+                position: absolute;
+                display: none;
+              }
+              
+              
+              &__chechboxContainer input:checked ~ .checkmark:after {
+                display: block;
+              }
+              
+              
+              &__chechboxContainer .checkmark:after {
+                left: 4px;
+                top: 2px;
+                width: 4px;
+                height: 7px;
+                border: solid $white;
+                border-width: 0 3px 3px 0;
+                -webkit-transform: rotate(45deg);
+                -ms-transform: rotate(45deg);
+                transform: rotate(45deg);
+              }
+            /* checkbox end */
+
             &__btnWrapper {
                 margin-top: 25.66px;
                 display: flex;

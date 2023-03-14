@@ -144,3 +144,10 @@
     text-align: left;
     padding: 8.87px 0 7.11px 20px;
 }
+
+/*Media Query*/
+@mixin mobile-md {
+    @media screen and (max-width: 768px) {
+        @content;
+    }
+}
