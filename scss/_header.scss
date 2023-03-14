@@ -13,8 +13,6 @@ header {
     align-items: center;
     justify-content: space-between;
     height: 120px;
-    
-
 
     &__logo {
         margin-right: 18px;
@@ -78,15 +76,54 @@ header {
     }
 
     &__icons {
+        margin-left: 143px;
         cursor: pointer;
        /*  margin-top: 49px; */
         display: flex;
         :not(:first-child) {
             margin-left: 24px;
         }
-        :first-child {
+        /* :first-child {
             margin-left: 143px;
-        }
+        } */
     }
 
 }
+
+/* mobile responisve*/
+
+@include mobile-min-width {
+    .header__hamburgerMenu {
+        display: none;
+    }
+}
+
+/*mobile md*/
+@include mobile-md {
+    .header__nav {
+        display: none;
+    }
+    .header__searchContainer {
+        display: none;
+    }
+    .header {
+        padding-left: 24px;
+        padding-right: 16px;
+        
+        &__logo {
+            margin-right: 0;
+            margin-left: 31px;
+            
+            img {
+                width: 105px;
+                height: 28px;
+            }
+        }
+
+        &__icons {
+            margin-left: 62px;
+        }
+
+    }
+}
+

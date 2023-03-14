@@ -5,16 +5,18 @@
     margin: 0 auto;
 
     &__breadcrumbs {
+        padding-bottom: 26px;
+
         li {
             @include reset-list;
             @include breadcrumbs;
-            padding-bottom: 26px;
+
 
             a {
                 text-decoration: none;
                 color: $semiBlack;
             }
-            
+
         }
 
         li+li:before {
@@ -29,29 +31,31 @@
 
         h1 {
             @include product-headline;
-            /* margin-top: 26px; */
-            
+
+
         }
+
         &__icons {
             display: flex;
             align-items: center;
             justify-content: space-between;
 
             :nth-child(1),
-        :nth-child(2), :nth-child(3) {
-            margin-left: 20px;
+            :nth-child(2),
+            :nth-child(3) {
+                margin-left: 20px;
+            }
+
+            :nth-child(4) {
+                margin-left: 18px;
+            }
+
+            img {
+                cursor: pointer;
+            }
         }
 
-        :nth-child(4) {
-            margin-left: 18px;
-        }
 
-        img {
-            cursor: pointer;
-        }
-        }
-
-        
     }
 
     &__info {
@@ -98,8 +102,9 @@
             &__inputWrapper {
                 margin-top: 23.76px;
                 display: flex;
+
                 :nth-child(1) {
-                    margin-right: 22px
+                    margin-right: 22px;
                 }
 
                 .selectType {
@@ -108,26 +113,27 @@
                     width: 173px;
                     margin-left: -4px;
                 }
-               
-                &__model, &__color {
+
+                &__model,
+                &__color {
                     @include select-box;
-                    
+
                     label {
                         @include select-label;
                     }
                 }
             }
-            
+
 
             #checkboxShort {
                 margin-top: 21.31px;
-                
+
             }
-            
+
             #checkboxLong {
                 margin-top: 12.01px
             }
-           
+
             /* checkbox */
             &__chechboxContainer {
                 @include inputs;
@@ -138,20 +144,20 @@
                 cursor: pointer;
                 line-height: 24px;
                 color: $semiBlack;
-                
-              }
-              
-              /* default checkbox hide */
-              &__chechboxContainer input {
+
+            }
+
+            /* default checkbox hide */
+            &__chechboxContainer input {
                 position: absolute;
                 opacity: 0;
                 cursor: pointer;
                 height: 0;
                 width: 0;
-              }
-              
-              /* new checkbox */
-              .checkmark {
+            }
+
+            /* new checkbox */
+            .checkmark {
                 position: absolute;
                 top: 0;
                 left: 0;
@@ -160,27 +166,27 @@
                 background-color: $lightGrey;
                 border: 2px solid $checkboxGrey;
                 border-radius: 4px;
-              }
-              
-              &__chechboxContainer input:checked ~ .checkmark {
+            }
+
+            &__chechboxContainer input:checked~.checkmark {
                 background-color: $green;
                 border: 2px solid $green;
-              }
-              
-              /* chechmark */
-              .checkmark:after {
+            }
+
+            /* chechmark */
+            .checkmark:after {
                 content: "";
                 position: absolute;
                 display: none;
-              }
-              
-              
-              &__chechboxContainer input:checked ~ .checkmark:after {
+            }
+
+
+            &__chechboxContainer input:checked~.checkmark:after {
                 display: block;
-              }
-              
-              
-              &__chechboxContainer .checkmark:after {
+            }
+
+
+            &__chechboxContainer .checkmark:after {
                 left: 4px;
                 top: 2px;
                 width: 4px;
@@ -188,7 +194,8 @@
                 border: solid $white;
                 border-width: 0 3px 3px 0;
                 transform: rotate(45deg);
-              }
+            }
+
             /* checkbox end */
 
             &__btnWrapper {
@@ -198,12 +205,138 @@
                 button {
                     @include btn;
                 }
+
                 .btnContac {
                     @include btn-contact;
-                    
+
                 }
             }
         }
     }
 
+}
+
+/*mobile md*/
+@include mobile-md {
+    h1 {
+        font-size: 28px;
+    }
+
+    h2 {
+        font-size: 24px;
+    }
+
+    p {
+        font-size: 14px;
+    }
+
+    .product {
+        padding-left: 24px;
+        padding-right: 23px;
+
+        &__breadcrumbs {
+            padding-bottom: 18px;
+        }
+
+        &__headlineAndIcons {
+            width: 100%;
+
+            
+            h1 {
+                font-size: 28px;
+                line-height: 36px;
+
+            }
+
+        }
+
+        &__info {
+            margin-top: 24px;
+            flex-direction: column;
+
+            &__image {
+                margin-right: 0;
+
+                :nth-child(2) {
+                    height: 48px;
+                    width: 48px;
+                }
+
+                :nth-child(3) {
+                    height: 48px;
+                    width: 48px;
+                    bottom: 219px;
+                    left: 613px;
+                }
+
+                img {
+                    width: 100%;
+                    height: 100%;
+                }
+            }
+
+            &__stock {
+                width: 100%;
+                margin-top: 23.79px;
+                padding: 24px 16px 32px 24px;
+
+                .stockInfo {
+                    margin-bottom: 14px;
+                }
+
+                p {
+                    font-size: 14px;
+                }
+
+                &__inputWrapper {
+                    margin-top: 19px;
+                    flex-direction: column;
+
+                    :nth-child(1) {
+                        margin-right: 0;
+                    }
+
+                    &__model {
+                        width: 100%;
+                    }
+
+                    &__color {
+                        width: 100%;
+                        margin-top: 16px;
+                    }
+                    .selectType {
+                        width: 100%;
+                    }
+
+                }
+
+                #checkboxShort {
+                    margin-top: 17px;
+                }
+
+                #checkboxLong {
+                    margin-top: 14px
+                }
+                &__btnWrapper {
+                    margin-top: 16px;
+                }
+            }
+        }
+
+    }
+}
+
+/* mobile sm */
+@include mobile-sm {
+    .product__info__image :nth-child(3) {
+        left: 70%;
+        bottom: 154px;
+    }
+    .product__info__image :nth-child(2) {
+        bottom: 154px;
+    }
+    .product__headlineAndIcons__icons {
+        position: relative;
+        top: 39px;
+    }
 }
