@@ -94,7 +94,7 @@
 @mixin btn {
     @include btn-fonts;
     background-color: $green;
-    padding: 11px 24px 13px 25px;
+    padding: 11px 24px 13px;
     color: $white;
     border: 1px solid;
     border-radius: 4px;
@@ -146,6 +146,70 @@
     padding: 8.87px 0 7.11px 20px;
 }
 
+@mixin popup-headline {
+    font-size: 24px;
+    line-height: 32px;
+    font-weight: 600;
+    color: $semiBlack;
+    font-family: 'Poppins';
+}
+
+@mixin popup-text {
+    font-size: 16px;
+    line-height: 24px;
+    font-weight: 400;
+    font-family: 'Inter';
+    color: $semiBlack;
+
+}
+
+@mixin popup-body {
+    position: relative;
+    width: 480px;
+    background-color: $white;
+    border-radius: 4px;
+    padding:20px 32px 24px 32px;
+ 
+}
+
+@mixin popup-input-field {
+    padding: 19px 0 19px 16px ;
+    background-color: $lightGrey;
+    border-radius: 4px 4px 0 0;
+    border-width: 0 0 1px 0;
+    border-style: solid $mediumGrey;
+    width: 100%;
+}
+
+@mixin popup-btn {
+    background-color: $orange;
+    padding: 11px 19px 13px 20px;
+    font-family: 'Poppins';
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 24px;
+    color: $white;
+    border-radius: 4px;
+    border: none;
+    
+}
+
+@mixin popup-close {
+    position: absolute;
+    top: 11px;
+    right: 20px;
+    width: 40px;
+    height: 40px;
+    background: url(../assets/img/close.png);
+    background-repeat: no-repeat;
+    background-size: 10px;
+    background-position: center;
+    cursor: pointer;
+    z-index: 10;
+}
+
+
+
 /*Media Query*/
 @mixin mobile-md {
     @media screen and (max-width: 768px) {
@@ -161,6 +225,18 @@
 
 @mixin mobile-sm {
     @media screen and (max-width: 480px) {
+        @content;
+    }
+}
+
+@mixin mobile-se-sm {
+    @media screen and (max-width: 376px) {
+        @content;
+    }
+}
+
+@mixin mobile-tablet {
+    @media (min-width:481px) and (max-width:767px) {
         @content;
     }
 }

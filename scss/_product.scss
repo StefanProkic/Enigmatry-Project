@@ -39,6 +39,7 @@
             display: flex;
             align-items: center;
             justify-content: space-between;
+            cursor: pointer;
 
             :nth-child(1),
             :nth-child(2),
@@ -216,6 +217,15 @@
 
 }
 
+/* mobile se sm */
+@include mobile-se-sm {
+    
+    .product__headlineAndIcons__icons {
+        left: 43%;
+    }
+}
+
+
 /*mobile md*/
 @include mobile-md {
     h1 {
@@ -241,7 +251,7 @@
         &__headlineAndIcons {
             width: 100%;
 
-            
+
             h1 {
                 font-size: 28px;
                 line-height: 36px;
@@ -260,13 +270,15 @@
                 :nth-child(2) {
                     height: 48px;
                     width: 48px;
+                    bottom: 219px;
+                    left: 57px;
                 }
 
                 :nth-child(3) {
                     height: 48px;
                     width: 48px;
                     bottom: 219px;
-                    left: 613px;
+                    left: 535px;
                 }
 
                 img {
@@ -304,6 +316,7 @@
                         width: 100%;
                         margin-top: 16px;
                     }
+
                     .selectType {
                         width: 100%;
                     }
@@ -317,6 +330,7 @@
                 #checkboxLong {
                     margin-top: 14px
                 }
+
                 &__btnWrapper {
                     margin-top: 16px;
                 }
@@ -326,17 +340,43 @@
     }
 }
 
+
+
 /* mobile sm */
 @include mobile-sm {
     .product__info__image :nth-child(3) {
         left: 70%;
         bottom: 154px;
     }
+
     .product__info__image :nth-child(2) {
+        left: 12px;
         bottom: 154px;
     }
-    .product__headlineAndIcons__icons {
-        position: relative;
-        top: 39px;
+
+    .product {
+        &__headlineAndIcons {
+            display: inline;
+
+            h1 {
+                padding-right: 24px;
+            }
+
+            &__icons {
+                position: relative;
+                top: -25px;
+                /* left: 60%; */
+                display: inline;
+            }
+        }
+    }
+}
+
+
+
+/* mobile - tablet */
+@include mobile-tablet {
+    .product__info__image :nth-child(3) {
+        left: 64%;
     }
 }

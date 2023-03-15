@@ -1,0 +1,64 @@
+@import 'mixins';
+@import 'fonts';
+
+.popup {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: none;
+}
+
+
+.contentBox {
+    @include popup-body;
+
+    &__text {
+        :nth-child(1) {
+            @include popup-headline;
+
+        }
+
+        :nth-child(2) {
+            @include popup-text;
+            margin-top: 16px;
+            margin-bottom: 24px;
+        }
+    }
+
+    &__form {
+        text-align: right;
+        input[type=text]:nth-child(1) {
+            @include popup-input-field;
+            margin-bottom:16px;
+        }
+        #textArea {
+            @include popup-input-field;
+            resize: none;
+        }
+        #sendBtn {
+            @include popup-btn;
+            margin-top: 24px
+        }
+        #cancelBtn {
+            @include popup-btn;
+            background-color: transparent;
+            color: $orange;
+        }
+    }
+        
+    &__close {
+       @include popup-close;
+
+    }
+}
+
+/*mobile se sm*/
+@include mobile-se-sm {
+    .contentBox {
+        @include popup-body;
+    width: 328px;
+    height: auto;
+    }
+    
+}
