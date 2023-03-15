@@ -2,63 +2,65 @@
 @import 'fonts';
 
 .specifications {
-    padding-top: 39px;
-    padding-bottom: 88.05px;
-    background-color: $lightGrey;
-    
-    &__headlines {
-        padding-bottom: 32.81px;
+  padding-top: 39px;
+  padding-bottom: 88.05px;
+  background-color: $lightGrey;
+
+  &__headlines {
+    padding-bottom: 32.81px;
+  }
+
+  &__table {
+
+    table {
+      border-collapse: collapse;
+      width: 100%;
     }
-    &__table {
-        /* padding-left: 8%;
-        padding-right: 8%; */
 
-        table {
-            border-collapse: collapse;
-            width: 100%;
-          }
-
-        th {
-            @include table-th;
-        }
-
-        td {
-            @include table-td;
-            @include table-td;
-        }
+    th {
+      @include table-th;
     }
+
+    td {
+      @include table-td;
+      @include table-td;
+    }
+  }
 }
 
-  td, th {
-    @include table-borders;
-  }
-  
-  tr:nth-child(even) {
-    background-color: $white;
-  }
+td,
+th {
+  @include table-borders;
+}
 
-  /* mobile responsive*/
-  @include mobile-md {
-    .specifications {
-      padding:32px 23px 70.86px 24px ;
-      
+tr:nth-child(even) {
+  background-color: $white;
+}
 
-      h2 {
-        padding-bottom: 32px;
-      }
+/* mobile responsive*/
+@include mobile-md {
+  .specifications {
+    padding: 32px 23px 70.86px 24px;
+
+    h2 {
+      padding-bottom: 32px;
+    }
+
+    &__table {
+      overflow: scroll;
     }
   }
+}
 
-  /* mobile se sm */
+/* mobile se sm */
 @include mobile-se-sm {
   .specifications__table {
     overflow: scroll;
   }
+
   td {
     padding: 0;
     min-width: 131px;
     padding-left: 20px;
-    
   }
-  
 }

@@ -16,58 +16,48 @@ header {
 
     &__logo {
         margin-right: 18px;
-
     }
 
-    /* nav ul li :nth-child(n+2) {
-        color: $semiBlack;
-    } */
-
     &__nav {
-        /* padding: 49px 0 47px 18px; */
         display: flex;
         height: 100%;
-        
+
         ul {
             height: 100%;
             padding-top: 10%;
         }
 
-        li  {
+        li {
             @include horizontal-list;
             margin-left: 40px;
             height: 100%;
-            
-            
+
             a {
                 text-decoration: none;
                 color: $white;
                 height: 100%;
                 display: inline-block;
                 transition: all 0.3s;
-                
+
                 &:hover {
                     border-bottom: 5px solid #000;
-                    
+
                 }
             }
         }
     }
 
-    
     &__searchContainer {
         display: flex;
         background: $lightGrey;
         margin-left: 40px;
-        /* margin: 32px 178px 32px 40px;*/
         border-radius: 4px 4px 0 0;
-        padding: 19px 14px 19px 16px; 
+        padding: 19px 14px 19px 16px;
 
         input {
             @include inputs;
             border: none;
             color: $semiBlack;
-
         }
 
         input:focus {
@@ -78,20 +68,15 @@ header {
     &__icons {
         margin-left: 143px;
         cursor: pointer;
-       /*  margin-top: 49px; */
         display: flex;
+
         :not(:first-child) {
             margin-left: 24px;
         }
-        /* :first-child {
-            margin-left: 143px;
-        } */
     }
-
 }
 
-/* mobile responisve*/
-
+/* desktop hamburger kill */
 @include mobile-min-width {
     .header__hamburgerMenu {
         display: none;
@@ -100,20 +85,28 @@ header {
 
 /*mobile md*/
 @include mobile-md {
+    .header__hamburgerMenu {
+        img {
+            cursor: pointer;
+        }
+    }
+
     .header__nav {
         display: none;
     }
+
     .header__searchContainer {
         display: none;
     }
+
     .header {
         padding-left: 24px;
         padding-right: 16px;
-        
+
         &__logo {
             margin-right: 0;
             margin-left: 31px;
-            
+
             img {
                 width: 105px;
                 height: 28px;
@@ -123,7 +116,32 @@ header {
         &__icons {
             margin-left: 62px;
         }
-
     }
 }
 
+/* laptop lg */
+@include laptop-lg {
+
+    .header__searchContainer {
+        display: none;
+    }
+
+    .header {
+        padding-left: 24px;
+        padding-right: 16px;
+
+        &__logo {
+            margin-right: 0;
+            margin-left: 31px;
+
+            img {
+                width: 105px;
+                height: 28px;
+            }
+        }
+
+        &__icons {
+            margin-left: 62px;
+        }
+    }
+}

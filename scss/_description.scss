@@ -5,9 +5,9 @@
     margin: 0 auto;
     display: flex;
     padding: 18px 0 20px;
-    
+
     margin-bottom: 60px;
-    
+
     :not(:last-child) {
         margin-right: 32px
     }
@@ -17,6 +17,7 @@
 
     }
 }
+
 hr {
     height: 1px;
     background-color: $mediumGrey;
@@ -28,35 +29,38 @@ hr {
     gap: 136px;
     padding-top: 60px;
     align-items: flex-start;
-    
+
     &__info {
 
         h2 {
             margin-bottom: 32.51px;
         }
+
         p {
             margin-bottom: 24.49px;
         }
+
         .btnMore {
             @include btn-more;
         }
     }
+
     &__image {
         margin-bottom: 65px;
     }
 }
 
-/* mobile responsive */
+/* mobile md */
 @include mobile-md {
     .description__detail {
         padding: 32px 0px 19px;
         padding-left: 24px;
-        
+
         p:not(:last-of-type) {
             margin-right: 24px;
         }
     }
- 
+
     .description {
         flex-direction: column-reverse;
         gap: 0;
@@ -80,9 +84,18 @@ hr {
             h2 {
                 margin-bottom: 24px;
             }
+
             p {
                 margin-bottom: 24px;
             }
         }
+    }
+}
+
+/* laptop lg*/
+@include laptop-lg {
+    .description {
+        gap: 22px;
+        justify-content: space-between;
     }
 }

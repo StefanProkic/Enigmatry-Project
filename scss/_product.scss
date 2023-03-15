@@ -11,12 +11,9 @@
             @include reset-list;
             @include breadcrumbs;
 
-
             a {
-                text-decoration: none;
                 color: $semiBlack;
             }
-
         }
 
         li+li:before {
@@ -31,8 +28,6 @@
 
         h1 {
             @include product-headline;
-
-
         }
 
         &__icons {
@@ -55,8 +50,6 @@
                 cursor: pointer;
             }
         }
-
-
     }
 
     &__info {
@@ -97,7 +90,6 @@
 
             p {
                 @include p-info;
-
             }
 
             &__inputWrapper {
@@ -124,7 +116,6 @@
                     }
                 }
             }
-
 
             #checkboxShort {
                 margin-top: 21.31px;
@@ -181,11 +172,9 @@
                 display: none;
             }
 
-
             &__chechboxContainer input:checked~.checkmark:after {
                 display: block;
             }
-
 
             &__chechboxContainer .checkmark:after {
                 left: 4px;
@@ -214,14 +203,16 @@
             }
         }
     }
-
 }
 
 /* mobile se sm */
 @include mobile-se-sm {
-    
     .product__headlineAndIcons__icons {
         left: 43%;
+    }
+
+    .product__info__stock__btnWrapper button {
+        padding: 11px 23px 13px;
     }
 }
 
@@ -251,13 +242,10 @@
         &__headlineAndIcons {
             width: 100%;
 
-
             h1 {
                 font-size: 28px;
                 line-height: 36px;
-
             }
-
         }
 
         &__info {
@@ -336,7 +324,6 @@
                 }
             }
         }
-
     }
 }
 
@@ -365,7 +352,7 @@
             &__icons {
                 position: relative;
                 top: -25px;
-                /* left: 60%; */
+                left: 49%;
                 display: inline;
             }
         }
@@ -378,5 +365,38 @@
 @include mobile-tablet {
     .product__info__image :nth-child(3) {
         left: 64%;
+    }
+}
+
+/* laptop lg*/
+@include laptop-lg {
+    .product {
+        &__info {
+            margin-top: 24px;
+            flex-direction: column;
+
+            &__image {
+                margin-right: 0;
+
+                :nth-child(2) {
+                    height: 48px;
+                    width: 48px;
+                    bottom: 219px;
+                    left: 57px;
+                }
+
+                :nth-child(3) {
+                    height: 48px;
+                    width: 48px;
+                    bottom: 219px;
+                    left: 703px;
+                }
+
+                img {
+                    width: 100%;
+                    height: 100%;
+                }
+            }
+        }
     }
 }

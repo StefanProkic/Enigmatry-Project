@@ -19,28 +19,36 @@ body {
     font-family: 'Inter';
 }
 
-h1, h2, h3, h4 {
+h1,
+h2,
+h3,
+h4 {
     font-family: 'Poppins';
 }
+
 button {
     font-family: 'Poppins';
 }
 
-th, td {
+th,
+td {
     font-family: 'Inter';
 }
+
 a {
     text-decoration: none;
 }
+
 .container {
     max-width: 84%;
-    margin: 0  auto;
+    margin: 0 auto;
 }
 
 section {
     min-width: 100%;
     margin: 0 auto;
 }
+
 section:last-child {
     background-color: $lightGrey;
 }
@@ -48,24 +56,25 @@ section:last-child {
 main {
     background-color: $white;
     padding-top: 40px;
-    
-
 }
+
 /*mobile responsive*/
 @include mobile-md {
     .container {
         max-width: 100%;
         width: 100%;
     }
-    
+
     h2 {
-        font-size:24px ;
+        font-size: 24px;
         line-height: 32px;
     }
+
     p {
         font-size: 16px;
         line-height: 24px;
     }
+
     main {
         padding-top: 31px;
     }

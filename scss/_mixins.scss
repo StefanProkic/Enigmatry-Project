@@ -4,7 +4,6 @@
     font-weight: 400;
     font-family: 'Inter';
     background: none;
-
 }
 
 @mixin reset-list {
@@ -12,26 +11,20 @@
     padding: 0;
     list-style: none;
     display: inline-block;
-
 }
 
 @mixin horizontal-list {
     @include reset-list;
-    /*font-family: 'Inter';*/
     font-size: 18px;
     line-height: 24px;
     font-weight: 600;
     color: $white;
-
-
 }
 
 @mixin breadcrumbs {
-    /*font-family: 'Inter';*/
     font-weight: 400;
     font-size: 13px;
     line-height: 18px;
-
 }
 
 @mixin breadcrumbs-arrows {
@@ -42,7 +35,6 @@
 }
 
 @mixin product-headline {
-    
     font-weight: 600;
     font-size: 40px;
     line-height: 48px;
@@ -51,11 +43,9 @@
 
 @mixin stock-info-span {
     color: $orange;
-
 }
 
 @mixin stock-info {
-    /*font-family: 'Inter';*/
     font-weight: 600;
     font-size: 16px;
     line-height: 24px;
@@ -63,7 +53,6 @@
 }
 
 @mixin p-info {
-    /*font-family: 'Inter';*/
     font-weight: 400;
     font-size: 16px;
     line-height: 24px;
@@ -80,7 +69,6 @@
 @mixin select-box {
     background-color: $white;
     padding: 4px 12px 12px 16px;
-    /* width: 200px; */
     border-bottom: 1px solid $mediumGrey;
     border-radius: 4px 4px 0 0;
 }
@@ -125,7 +113,7 @@
     border: 1px solid $mediumGrey;
     border-radius: 4px;
     cursor: pointer;
-    }
+}
 
 @mixin table-th {
     font-size: 14px;
@@ -160,7 +148,6 @@
     font-weight: 400;
     font-family: 'Inter';
     color: $semiBlack;
-
 }
 
 @mixin popup-body {
@@ -168,12 +155,11 @@
     width: 480px;
     background-color: $white;
     border-radius: 4px;
-    padding:20px 32px 24px 32px;
- 
+    padding: 20px 32px 24px 32px;
 }
 
 @mixin popup-input-field {
-    padding: 19px 0 19px 16px ;
+    padding: 19px 0 19px 16px;
     background-color: $lightGrey;
     border-radius: 4px 4px 0 0;
     border-width: 0 0 1px 0;
@@ -191,7 +177,6 @@
     color: $white;
     border-radius: 4px;
     border: none;
-    
 }
 
 @mixin popup-close {
@@ -207,8 +192,6 @@
     cursor: pointer;
     z-index: 10;
 }
-
-
 
 /*Media Query*/
 @mixin mobile-md {
@@ -237,6 +220,12 @@
 
 @mixin mobile-tablet {
     @media (min-width:481px) and (max-width:767px) {
+        @content;
+    }
+}
+
+@mixin laptop-lg {
+    @media screen and (min-width: 1023px) and (max-width: 1199px) {
         @content;
     }
 }
